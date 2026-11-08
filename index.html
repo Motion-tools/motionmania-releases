@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en" data-type="software" data-radius="soft" data-buttons="pill">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="page-type" content="software">
+<meta name="site-kind" content="software">
+<title>Motion Mania · Live stream clipper for Twitch, YouTube &amp; Kick</title>
+<meta name="description" content="Motion Mania watches Twitch, YouTube or Kick, catches the moment chat reacts to, and edits a 1080×1920 clip with captions and sound. Runs on your computer. Free plan.">
+<link rel="canonical" href="https://motionmania.app/">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Motion Mania">
+<meta property="og:title" content="Motion Mania · live stream clipper for Twitch, YouTube and Kick">
+<meta property="og:description" content="Catches the moment chat reacts to and edits a vertical clip while the stream is still live. Runs on your computer.">
+<meta property="og:url" content="https://motionmania.app/">
+<meta property="og:image" content="https://motionmania.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Motion Mania · live stream clipper">
+<meta name="twitter:description" content="Twitch, YouTube and Kick. Vertical clips with captions, Pro Edit, phone approval and upload.">
+<meta name="twitter:image" content="https://motionmania.app/assets/img/og.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://motionmania.app/#org",
+      "name": "Motion Mania",
+      "url": "https://motionmania.app/",
+      "logo": "https://motionmania.app/assets/img/icon-512.png",
+      "email": "support@motionmania.app"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://motionmania.app/#site",
+      "url": "https://motionmania.app/",
+      "name": "Motion Mania",
+      "publisher": { "@id": "https://motionmania.app/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://motionmania.app/#app",
+      "name": "Motion Mania",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "macOS, Windows",
+      "description": "Desktop app that watches live streams on Twitch, YouTube and Kick, detects hype moments from chat, audio and reaction signals, and renders vertical 1080x1920 clips with captions, layouts, music and upload.",
+      "url": "https://motionmania.app/",
+      "downloadUrl": "https://motionmania.app/download.html",
+      "image": "https://motionmania.app/assets/img/og.jpg",
+      "offers": [
+        { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Pro monthly", "price": "12", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Pro yearly", "price": "99", "priceCurrency": "USD" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://motionmania.app/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Which streaming platforms does Motion Mania work with?", "acceptedAnswer": { "@type": "Answer", "text": "Twitch, YouTube and Kick. Past broadcasts, videos and local files work too." } },
+        { "@type": "Question", "name": "Does Motion Mania work for GTA 6 streams?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It does not need a kill feed or a game integration, so it works on GTA, story games, IRL and variety content. GTA 6 launches on 19 November 2026 for PS5 and Xbox Series X|S only." } },
+        { "@type": "Question", "name": "Does my computer need to stay on?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Motion Mania records and renders on your own computer, which is why clips are unlimited and your footage never leaves the machine." } },
+        { "@type": "Question", "name": "Is Motion Mania a cloud service?", "acceptedAnswer": { "@type": "Answer", "text": "No. Detection, editing and rendering happen locally. The network is used for the stream, optional AI titles and uploading clips you approve." } },
+        { "@type": "Question", "name": "Can I clip someone else's stream?", "acceptedAnswer": { "@type": "Answer", "text": "You need the right to republish it. Many streamers run clipping programmes; others do not. Only clip content you own or have permission to use." } },
+        { "@type": "Question", "name": "Does it post to Instagram or Facebook?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Motion Mania uploads to YouTube Shorts and TikTok." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Motion Mania home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#101014"/><rect x="17" y="17" width="44" height="44" rx="12" fill="none" stroke="#fff" stroke-width="7" opacity=".45"/><rect x="40" y="40" width="44" height="44" rx="12" fill="#FF2D55"/><path d="M57 51 74 62 57 73Z" fill="#fff"/></svg>
+      Motion Mania
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="guides/">Guides</a>
+      <a href="download.html">Download</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--primary btn--sm" href="download.html">Download free</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1 · HERO -->
+<section class="hero" data-enter aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="hero__badge enter"><b>New</b> GTA 6 ready · 19 November</span>
+        <h1 id="hero-h" class="enter">Live stream clipper for Twitch, YouTube and Kick</h1>
+        <p class="hero__lead enter">Motion Mania watches the broadcast, catches the moment chat reacts to, and edits a vertical clip with captions and sound. It runs on your computer.</p>
+        <div class="btn-row enter">
+          <a class="btn btn--primary" href="download.html">Download for Mac</a>
+          <a class="btn btn--secondary" href="pricing.html">See pricing</a>
+        </div>
+        <p class="hero__proof enter"><span>Free plan</span><span>Unlimited clips</span><span>macOS and Windows</span></p>
+      </div>
+
+      <div class="hero__art enter enter--art" role="img" aria-label="Motion Mania's clip inbox: three moments waiting for approval, each with a quality score">
+        <div class="win" aria-hidden="true">
+          <div class="win__bar"><span class="win__dots"><i></i><i></i><i></i></span><span>Motion Mania · clipping</span></div>
+          <div class="win__side">
+            <span class="is-on"><i></i>Home</span>
+            <span><i></i>Templates</span>
+            <span><i></i>Accounts</span>
+          </div>
+          <div class="win__main">
+            <div class="win__head"><b>Clips</b><span class="win__live">Live</span></div>
+            <div class="win__tabs"><span class="is-on">Waiting 3</span><span>Approved 14</span></div>
+            <div class="cliprow">
+              <span class="cliprow__thumb"></span>
+              <span class="cliprow__meta"><b>He did not expect that</b><small>0:38 · chat spike</small></span>
+              <span class="cliprow__score">9/10</span>
+            </div>
+            <div class="cliprow">
+              <span class="cliprow__thumb"></span>
+              <span class="cliprow__meta"><b>Wait for the end</b><small>0:27 · loudness +11 dB</small></span>
+              <span class="cliprow__score">8/10</span>
+            </div>
+            <div class="cliprow">
+              <span class="cliprow__thumb"></span>
+              <span class="cliprow__meta"><b>Chat lost it</b><small>0:51 · reaction</small></span>
+              <span class="cliprow__score low">5/10</span>
+            </div>
+          </div>
+        </div>
+        <div class="win__note" aria-hidden="true">
+          <span class="tag">Clip ready</span>
+          <b>0:38 · 1080×1920</b>
+          <small>Captions, split layout, music on the punchline</small>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · CLIP WALL -->
+<section class="screen" aria-labelledby="out-h">
+  <div class="wrap">
+    <div class="sechead">
+      <h2 id="out-h">One stream. A week of posts.</h2>
+      <p>Vertical, captioned, scored and ready. Every clip is a normal MP4 you can post anywhere.</p>
+    </div>
+    <div class="clipwall">
+      <article class="clipcard">
+        <img src="assets/img/clip-city.webp" width="720" height="1280" alt="Vertical clip preview of a neon Miami street at night">
+        <span class="clipcard__score">9/10</span>
+        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="clipcard__cap">He did not expect that</span>
+        <span class="clipcard__meta">0:38 · 1080×1920</span>
+      </article>
+      <article class="clipcard">
+        <img src="assets/img/clip-palm.webp" width="720" height="1280" alt="Vertical clip preview of neon light trails around a palm tree">
+        <span class="clipcard__score">8/10</span>
+        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="clipcard__cap">Wait for the end</span>
+        <span class="clipcard__meta">0:27 · Pro Edit</span>
+      </article>
+      <article class="clipcard">
+        <img src="assets/img/clip-setup.webp" width="720" height="1280" alt="Vertical clip preview of a gaming room in blue light">
+        <span class="clipcard__score">7/10</span>
+        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="clipcard__cap">Chat lost it</span>
+        <span class="clipcard__meta">0:51 · reaction</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · HOW IT WORKS -->
+<section class="screen section--line" id="how-it-works" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="split2">
+      <div>
+        <h2 id="how-h">Paste a link and it watches the room</h2>
+        <div class="steps" style="grid-template-columns:1fr;margin-top:var(--s-5)">
+          <div class="step">
+            <span class="step__n">01 · LIVE LINK</span>
+            <h3>Stream link</h3>
+            <p>Twitch, YouTube or Kick. A channel page, a live URL, a past broadcast or a file on your disk.</p>
+          </div>
+          <div class="step">
+            <span class="step__n">02 · CHANNEL BASELINE</span>
+            <h3>Channel baseline</h3>
+            <p>Chat speed and loudness are measured against that channel's own normal, not a fixed number.</p>
+          </div>
+          <div class="step">
+            <span class="step__n">03 · CLIP QUEUE</span>
+            <h3>Clip queue</h3>
+            <p>Each moment is cut, cropped to 1080×1920, captioned and edited. Approve it on your phone.</p>
+          </div>
+        </div>
+      </div>
+      <div class="split2__media">
+        <svg class="diagram" viewBox="0 0 520 360" role="img" aria-label="A stream link feeds a detector, which produces a vertical clip">
+          <rect width="520" height="360" rx="14" fill="#0e0e11" stroke="#1d1d24"/>
+          <path class="line" d="M60 96 H300" />
+          <path class="line" d="M300 96 C360 96 360 180 420 180" />
+          <path class="line" d="M60 200 H180" />
+          <path class="accent" d="M60 120 V260" stroke-dasharray="3 7" opacity=".7" />
+          <rect class="node" x="60" y="72" width="120" height="48" rx="8" />
+          <text x="120" y="101" text-anchor="middle">STREAM</text>
+          <rect class="node" x="180" y="176" width="120" height="48" rx="8" />
+          <text x="240" y="205" text-anchor="middle">DETECTOR</text>
+          <circle class="pulse" cx="300" cy="96" r="4" />
+          <circle class="pulse" cx="420" cy="180" r="4" />
+          <rect x="372" y="120" width="108" height="192" rx="10" fill="#101014" stroke="#2a2a31" />
+          <rect x="386" y="136" width="80" height="58" rx="4" fill="#1b1b21" />
+          <rect x="386" y="202" width="80" height="6" rx="3" fill="#2a2a31" />
+          <rect x="386" y="214" width="56" height="6" rx="3" fill="#2a2a31" />
+          <rect x="386" y="238" width="80" height="3" rx="1.5" fill="var(--p-accent)" />
+          <text x="426" y="332" text-anchor="middle">1080 × 1920</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · DETECTION -->
+<section class="screen section--line" aria-labelledby="detect-h">
+  <div class="wrap">
+    <div class="split2">
+      <div>
+        <h2 id="detect-h">Chat-first detection</h2>
+        <p class="muted">Most clippers read a kill feed. That misses the reaction, the rage, the line chat repeats for ten minutes. Motion Mania measures the room instead.</p>
+        <div class="facts" data-counters style="grid-template-columns:1fr;gap:var(--s-3);margin-top:var(--s-4);border-top:0;padding-top:0">
+          <div class="fact"><div class="fact__n"><span data-count-to="2.5" data-decimals="1">2.5</span><em>× chat speed</em></div></div>
+          <div class="fact"><div class="fact__n"><em>+</em><span data-count-to="9" data-decimals="0">9</span><em>dB loudness</em></div></div>
+          <div class="fact"><div class="fact__n"><span data-count-to="4" data-decimals="0">4</span><em>chatters minimum</em></div></div>
+        </div>
+        <p class="small muted" style="margin-top:var(--s-4)">Works on GTA, story games, IRL and variety, without a game integration.</p>
+      </div>
+      <div class="split2__media">
+        <svg class="diagram" viewBox="0 0 520 320" role="img" aria-label="Chat messages per second rising above the clip threshold at the moment of a reaction">
+          <rect width="520" height="320" rx="14" fill="#0e0e11" stroke="#1d1d24"/>
+          <path class="line" d="M44 260 H500" />
+          <path class="line" d="M44 260 V36" />
+          <path class="line" stroke-dasharray="4 7" d="M44 148 H500" />
+          <path class="accent" d="M44 246 L104 240 L158 250 L214 238 L262 244 L306 226 L334 168 L356 74 L384 58 L410 118 L448 206 L500 240" />
+          <circle class="pulse" cx="356" cy="74" r="4.5" />
+          <text x="48" y="140">CLIP THRESHOLD</text>
+          <text x="48" y="290">CHAT MESSAGES / SECOND</text>
+          <text x="366" y="60">MOMENT</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · EDITING + OUTPUT -->
+<section class="screen section--line" aria-labelledby="edit-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="split__text">
+        <h2 id="edit-h">A template for the look, Pro Edit for the cut</h2>
+        <p class="muted">Built-in vertical layouts, word-level captions, music, colour looks and effects. Pro Edit adds the cut: speaker changes, jump cuts, punch captions, motion and a meme ending only when the clip earns it.</p>
+        <ul class="checklist">
+          <li><strong>Split, stack, PiP, duo</strong>: the facecam stays where it belongs</li>
+          <li><strong>Captions on every word</strong>: four styles, timed to the audio</li>
+          <li><strong>Music on the punchline</strong>: tempo and drop analysed per track</li>
+          <li><strong>One meme, when it fits</strong>: a weak match is dropped</li>
+        </ul>
+      </div>
+      <div class="split__media">
+        <div class="preview916">
+          <img src="assets/img/clip-street.webp" width="720" height="1280" alt="A vertical clip preview with punch captions over a neon city street">
+          <span class="preview916__tag">Pro Edit</span>
+          <span class="preview916__score" title="Example AI score for this preview — not a customer review" aria-label="Example AI score, not a customer review">AI 9/10</span>
+          <div class="preview916__cap">No way<br><em>he did that</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · DESKTOP + PHONE -->
+<section class="screen section--line" aria-labelledby="phone-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="split__text">
+        <h2 id="phone-h">Approve it from your phone</h2>
+        <p class="muted">Motion Mania serves a private web app from your own computer. Scan once, add it to your home screen, and a notification arrives when a clip is ready.</p>
+        <ul class="checklist">
+          <li><strong>Approve or reject</strong> with one tap</li>
+          <li><strong>Change the title or banner</strong> before it posts</li>
+          <li><strong>Watch instantly</strong>: a light copy, not a 30 MB download</li>
+          <li><strong>Post to YouTube or TikTok</strong> from the same screen</li>
+        </ul>
+      </div>
+      <div class="split__media">
+        <div class="devices">
+          <div class="phone" role="img" aria-label="Phone app showing a clip ready with Approve and Reject buttons">
+            <div class="phone__screen">
+              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__bar"><b>Motion Mania</b><span>Clipping</span></div>
+              <div class="phone__clip">
+                <img src="assets/img/clip-setup.webp" width="720" height="1280" alt="">
+                <span class="score">8/10</span>
+                <span class="cap">Wait for the end</span>
+              </div>
+              <div class="phone__actions"><span class="no">Reject</span><span class="ok">Approve</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · STATEMENT -->
+<section class="statement" data-highlight aria-label="The clip exists while the stream is still live">
+  <div class="wrap">
+    <p><span class="w">The</span> <span class="w">clip</span> <span class="w">exists</span> <span class="w">while</span> <span class="w">the</span> <span class="w accent">stream</span> <span class="w">is</span> <span class="w">still</span> <span class="w">live.</span></p>
+  </div>
+</section>
+
+<!-- 8 · GTA 6 PHOTO BAND -->
+<section class="photo-band" aria-labelledby="gta-h">
+  <img src="assets/img/gta-miami.webp" width="1600" height="1066" alt="Neon-lit Miami street at night with palm trees and car light trails">
+  <div class="wrap">
+    <span class="eyebrow">GTA 6 · 19 November 2026</span>
+    <h2 id="gta-h">Day-one GTA 6 clips can only come from the stream</h2>
+    <p>The launch build is console-only, with no Rockstar Editor. The broadcast is the only source of footage, and Motion Mania is built to clip it while it runs.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="guides/gta-6-clipping.html">Read the GTA 6 guide</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · FREE VS PRO -->
+<section class="screen" id="pricing" aria-labelledby="price-h">
+  <div class="wrap">
+    <div class="sechead">
+      <h2 id="price-h">Both plans clip without limits</h2>
+    </div>
+    <div class="pricebanner">
+      <b aria-hidden="true">✓</b>
+      <span><strong>Unlimited clips on both plans.</strong> No credits, minutes or caps.</span>
+    </div>
+    <div class="whygrid">
+      <div class="why"><b>Post without downloading</b><p>Approved clips upload to YouTube Shorts or your TikTok inbox. Free exports the MP4 and you post it yourself.</p></div>
+      <div class="why"><b>Approve anywhere</b><p>The private phone app sends a notification and takes one tap to approve, retitle or reject.</p></div>
+      <div class="why"><b>Let the AI choose</b><p>Titles, hooks and hashtags written from the clip, plus a quality score that skips the weak moments.</p></div>
+    </div>
+    <div class="plans plans--two">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="plan-note">Everything you need to make clips and post them yourself.</p>
+        <div class="price">$0</div>
+        <ul>
+          <li>Unlimited clips</li>
+          <li>Template Studio and built-in layouts</li>
+          <li>Captions, music and effects</li>
+          <li>Download 1080×1920 MP4</li>
+          <li class="off">Pro Edit</li>
+          <li class="off">Phone app</li>
+          <li class="off">Auto-upload</li>
+        </ul>
+        <a class="btn btn--ghost btn--block" href="download.html">Download free</a>
+      </div>
+      <div class="plan plan--pro">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><h3>Pro</h3><span class="badge">Most popular</span></div>
+        <p class="plan-note">For creators posting every day.</p>
+        <div class="price">$12 <span>/ month</span><small>or $99 a year, two months free</small></div>
+        <ul>
+          <li>Everything in Free</li>
+          <li><strong>Pro Edit</strong>: speaker cuts, jump cuts, motion, memes, sound design</li>
+          <li><strong>Phone app</strong> with notifications</li>
+          <li><strong>Auto-upload</strong> to YouTube Shorts and TikTok</li>
+          <li><strong>AI titles</strong> and quality check</li>
+          <li>Email support</li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="pricing.html">Get Pro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · FAQ -->
+<section class="screen section--line" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="split2">
+      <div>
+        <h2 id="faq-h">Questions, answered</h2>
+        <div class="faq" style="margin-top:var(--s-4)">
+          <div class="qa"><h3>Which platforms does it work with?</h3><p>Twitch, YouTube and Kick. Past broadcasts, normal videos and local files work too.</p></div>
+          <div class="qa"><h3>Does it work for GTA 6 streams?</h3><p>Yes. It does not need a kill feed or a game integration, so it works on GTA, story games, IRL and variety content. GTA 6 launches on 19 November 2026 for PS5 and Xbox Series X|S only.</p></div>
+          <div class="qa"><h3>Does my computer need to stay on?</h3><p>Yes. Motion Mania records and renders on your own computer, which is why clips are unlimited and your footage never leaves the machine.</p></div>
+          <div class="qa"><h3>Is it a cloud service?</h3><p>No. Detection, editing and rendering happen locally. The network is used for the stream, optional AI titles and uploading clips you approve.</p></div>
+          <div class="qa"><h3>Can I clip someone else's stream?</h3><p>You need the right to republish it. Many streamers run clipping programmes; others do not.</p></div>
+          <div class="qa"><h3>Does it post to Instagram or Facebook?</h3><p>Not yet. Motion Mania uploads to YouTube Shorts and TikTok.</p></div>
+        </div>
+      </div>
+      <div class="split2__media">
+        <div class="shot"><img src="assets/img/after-home.webp" width="1800" height="1062" alt="Motion Mania home screen with a live stream link ready to clip" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · CLOSE -->
+<section class="close close--photo">
+  <img src="assets/img/setup-blue.webp" width="1200" height="1800" alt="" loading="lazy">
+  <div class="wrap">
+    <h2>Motion Mania on your desktop</h2>
+    <p>Install it, paste a link, let it watch. Free to start, no credit card.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="download.html">Download Motion Mania</a>
+      <a class="btn btn--ghost" href="features.html">See every feature</a>
+    </div>
+    <p class="platforms" style="margin-top:var(--s-5)"><strong>Works with</strong><span>Twitch</span><span class="dot"></span><span>YouTube</span><span class="dot"></span><span>Kick</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Motion Mania home">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#101014"/><rect x="17" y="17" width="44" height="44" rx="12" fill="none" stroke="#fff" stroke-width="7" opacity=".45"/><rect x="40" y="40" width="44" height="44" rx="12" fill="#FF2D55"/><path d="M57 51 74 62 57 73Z" fill="#fff"/></svg>
+          Motion Mania
+        </a>
+        <p class="small muted" style="margin-top:12px;max-width:34ch">Real-time stream clipping for Twitch, YouTube and Kick.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="guides/">Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+          <li><a href="data-deletion.html">Data deletion</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="guides/twitch-clipping.html">Twitch clipping</a></li>
+          <li><a href="guides/kick-clipping.html">Kick clipping</a></li>
+          <li><a href="guides/gta-6-clipping.html">GTA 6 clipping</a></li>
+          <li><a href="guides/youtube-shorts-from-streams.html">Stream to Shorts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© <span id="year">2026</span> Motion Mania. All rights reserved.</span>
+      <span><a href="contact.html">support@motionmania.app</a></span>
+    </div>
+    <p class="photocredit">Photography via <a href="https://www.pexels.com/license/" rel="noopener">Pexels</a>: Miami street, neon palms, gaming room.</p>
+    <p class="disclaimer">Motion Mania is not affiliated with, endorsed by or sponsored by Twitch, YouTube, Google, TikTok, Kick, Rockstar Games or Take-Two Interactive. All trademarks belong to their respective owners. You are responsible for the content you clip and publish.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
