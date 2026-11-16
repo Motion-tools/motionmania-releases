@@ -814,3 +814,34 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .sense-grid{grid-template-columns:1fr}
   .advantage-grid,.look-grid{grid-template-columns:1fr}
 }
+
+/* Keep the new icon tiles compact and responsive. */
+.icon,
+.sense__icon,
+.advantage__icon {
+  width: clamp(24px, 2.2vw, 30px);
+  height: clamp(24px, 2.2vw, 30px);
+  border-radius: 7px;
+  flex: 0 0 auto;
+}
+.icon svg,
+.sense__icon svg,
+.advantage__icon svg {
+  width: 56%;
+  height: 56%;
+  max-width: 16px;
+  max-height: 16px;
+}
+.look-card__effects svg {
+  width: clamp(18px, 1.6vw, 22px);
+  height: clamp(18px, 1.6vw, 22px);
+}
+@media (max-width: 600px) {
+  .icon,
+  .sense__icon,
+  .advantage__icon { width: 24px; height: 24px; }
+  .icon svg,
+  .sense__icon svg,
+  .advantage__icon svg { max-width: 14px; max-height: 14px; }
+  .look-card__effects svg { width: 18px; height: 18px; }
+}
