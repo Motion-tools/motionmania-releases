@@ -3,7 +3,7 @@
 > Motion Mania is a desktop app for macOS and Windows that watches Twitch, YouTube or Kick live streams, catches the moment chat reacts to, and edits a vertical 1080×1920 clip with captions and sound. Detection, editing and rendering run on your own computer.
 
 - Free plan: unlimited clipping, post manually.
-- Pro: $12/month. Adds Pro Edit, the phone app, auto-upload to YouTube Shorts and TikTok, and AI titles.
+- Pro: $10/month. Adds Pro Edit, the phone app, auto-upload to YouTube Shorts and TikTok, and AI titles.
 - Support: support@motionmania.app
 
 ## Product
