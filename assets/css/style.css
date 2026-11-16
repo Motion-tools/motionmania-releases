@@ -424,7 +424,7 @@ li { margin: .4em 0; }
 .callout .btn-row { margin-bottom: 0; }
 
 /* ---------------- pricing ---------------- */
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4); margin-top: var(--s-6); }
+.plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-4); margin-top: var(--s-6); }
 .plan {
   background: var(--p-surface);
   border: 1px solid rgb(255 255 255 / .08);
