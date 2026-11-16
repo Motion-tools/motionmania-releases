@@ -13,37 +13,174 @@
       background: #08080a; color: #f6f5f3;
       font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     }
-    main { width: min(520px, calc(100% - 40px)); text-align: center; }
-    h1 { margin: 0 0 12px; font-size: clamp(28px, 6vw, 44px); letter-spacing: -.04em; }
-    p { margin: 0 0 20px; color: #a6a3a0; }
+    main { width: min(520px, calc(100% - 40px)); padding: 28px 0; }
+    h1 { margin: 0 0 10px; font-size: clamp(30px, 7vw, 48px); letter-spacing: -.045em; }
+    h2 { margin: 26px 0 10px; font-size: 18px; }
+    p { margin: 0 0 18px; color: #a6a3a0; }
+    label { display: block; margin: 0 0 8px; color: #cbc8c4; font-size: 13px; font-weight: 600; }
+    input {
+      width: 100%; border: 1px solid #34343d; border-radius: 10px;
+      background: #17171c; color: #f6f5f3; padding: 13px 14px; font: inherit;
+    }
+    input:focus { outline: 2px solid #ff7a8f; border-color: transparent; }
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 18px; }
+    .plan {
+      cursor: pointer; border: 1px solid #34343d; border-radius: 10px;
+      padding: 12px; text-align: center; color: #cbc8c4;
+    }
+    .plan input { position: absolute; opacity: 0; pointer-events: none; }
+    .plan:has(input:checked) { border-color: #ff2d55; background: #241017; color: #fff; }
+    button {
+      width: 100%; border: 0; border-radius: 10px; padding: 14px;
+      background: #ff2d55; color: #fff; font: inherit; font-weight: 700; cursor: pointer;
+    }
+    button:disabled { opacity: .55; cursor: wait; }
     a { color: #ff7a8f; }
+    .notice { min-height: 24px; margin-top: 14px; color: #f5cf8a; font-size: 13px; }
+    .claim { margin-top: 28px; padding: 18px; border: 1px solid #34343d; border-radius: 12px; background: #101014; }
+    pre { white-space: pre-wrap; word-break: break-all; margin: 10px 0; padding: 12px; border-radius: 8px; background: #17171c; color: #e6e4e1; font-size: 11px; }
+    .hidden { display: none !important; }
   </style>
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 </head>
 <body>
   <main>
-    <h1>Opening secure checkout…</h1>
-    <p id="status">If this takes more than a few seconds, return to pricing and try again.</p>
-    <a href="/pricing">Back to pricing</a>
+    <a href="/pricing">← Pricing</a>
+    <h1 id="heading">Upgrade to Pro</h1>
+    <p id="intro">Choose a plan and enter the email you use in Motion Mania.</p>
+
+    <form id="details">
+      <label for="email">Email used in Motion Mania</label>
+      <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <div class="plans" role="group" aria-label="Plan">
+        <label class="plan"><input type="radio" name="plan" value="monthly" checked> $12 / month</label>
+        <label class="plan"><input type="radio" name="plan" value="yearly"> $99 / year</label>
+      </div>
+      <button id="pay" type="submit">Continue to secure checkout</button>
+      <div id="notice" class="notice" role="status"></div>
+    </form>
+
+    <div id="opening" class="hidden">
+      <h2>Opening secure checkout…</h2>
+      <p>Paddle will open on top of this page. Do not close the window until payment is complete.</p>
+    </div>
+
+    <section id="claim" class="claim hidden">
+      <h2>Payment complete?</h2>
+      <p>After Paddle confirms the payment, get your Pro licence here.</p>
+      <button id="claimButton" type="button">Get my licence</button>
+      <div id="claimNotice" class="notice" role="status"></div>
+      <pre id="licence" class="hidden"></pre>
+      <button id="copyButton" type="button" class="hidden" style="margin-top:8px">Copy licence</button>
+    </section>
   </main>
+
   <script>
     /*
-     * Paste the Paddle sandbox client-side token below.
-     * Paddle dashboard → My account → Settings → Authentication →
-     * Client-side tokens → New token. Sandbox tokens start with "test_".
-     *
-     * For live checkout: use the live_ token and remove
-     * Paddle.Environment.set("sandbox").
+     * Sandbox client-side token. Replace with the live_ token for production
+     * and remove Paddle.Environment.set("sandbox").
      */
     const PADDLE_CLIENT_TOKEN = "test_6d2d273f45f984207aecc7e508e";
-    const status = document.getElementById("status");
 
-    if (!PADDLE_CLIENT_TOKEN.startsWith("test_") && !PADDLE_CLIENT_TOKEN.startsWith("live_")) {
-      status.textContent = "Checkout is not configured yet. Add the Paddle client-side token.";
-    } else {
-      if (PADDLE_CLIENT_TOKEN.startsWith("test_")) Paddle.Environment.set("sandbox");
-      Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
+    /*
+     * Until api.motionmania.app is attached to the Worker, use the workers.dev
+     * URL. Change this to https://api.motionmania.app after the custom domain
+     * is live.
+     */
+    const API = "https://motionmania-api.pritamsap2.workers.dev";
+
+    const form = document.getElementById("details");
+    const notice = document.getElementById("notice");
+    const opening = document.getElementById("opening");
+    const claim = document.getElementById("claim");
+    const claimNotice = document.getElementById("claimNotice");
+    const claimButton = document.getElementById("claimButton");
+    const licenceEl = document.getElementById("licence");
+    const copyButton = document.getElementById("copyButton");
+    const params = new URLSearchParams(location.search);
+    const transactionId = params.get("_ptxn");
+
+    function showClaim() {
+      claim.classList.remove("hidden");
     }
+
+    function initializePaddle() {
+      if (PADDLE_CLIENT_TOKEN.startsWith("test_")) Paddle.Environment.set("sandbox");
+      Paddle.Initialize({
+        token: PADDLE_CLIENT_TOKEN,
+        eventCallback: (event) => {
+          if (event && event.name === "checkout.completed") showClaim();
+        },
+      });
+    }
+
+    if (transactionId) {
+      form.classList.add("hidden");
+      opening.classList.remove("hidden");
+      showClaim();
+      initializePaddle();
+    } else {
+      const selected = params.get("plan") === "yearly" ? "yearly" : "monthly";
+      const planInput = document.querySelector(`input[name="plan"][value="${selected}"]`);
+      if (planInput) planInput.checked = true;
+      const savedClaim = sessionStorage.getItem("mm_claim_token");
+      if (savedClaim) showClaim();
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const plan = form.querySelector('input[name="plan"]:checked').value;
+      if (!email) return;
+      const button = document.getElementById("pay");
+      button.disabled = true;
+      notice.textContent = "Creating your checkout…";
+      try {
+        const response = await fetch(`${API}/v1/billing/checkout`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email, plan }),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.checkout_url) {
+          throw new Error(data.error || "Could not create checkout.");
+        }
+        sessionStorage.setItem("mm_claim_token", data.claim_token || "");
+        window.location.href = data.checkout_url;
+      } catch (error) {
+        notice.textContent = error.message || "Could not create checkout.";
+        button.disabled = false;
+      }
+    });
+
+    claimButton.addEventListener("click", async () => {
+      const token = sessionStorage.getItem("mm_claim_token");
+      if (!token) {
+        claimNotice.textContent = "No claim token found. Use the checkout link from the email or start again.";
+        return;
+      }
+      claimButton.disabled = true;
+      claimNotice.textContent = "Checking your payment…";
+      try {
+        const response = await fetch(`${API}/v1/licence/claim?token=${encodeURIComponent(token)}`);
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.licence) {
+          throw new Error(data.error || "Your payment is not active yet. Wait a moment and try again.");
+        }
+        licenceEl.textContent = data.licence;
+        licenceEl.classList.remove("hidden");
+        copyButton.classList.remove("hidden");
+        claimNotice.textContent = "Licence ready. Paste it into Motion Mania → Accounts → Already have a licence key?";
+      } catch (error) {
+        claimNotice.textContent = error.message;
+        claimButton.disabled = false;
+      }
+    });
+
+    copyButton.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(licenceEl.textContent || "");
+      copyButton.textContent = "Copied";
+    });
   </script>
 </body>
 </html>
