@@ -14,6 +14,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
+<link rel="preload" href="assets/fonts/Epilogue-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 
 <meta property="og:type" content="website">
@@ -56,7 +57,7 @@
       "operatingSystem": "macOS, Windows",
       "description": "Desktop app that watches live streams on Twitch, YouTube and Kick, detects hype moments from chat, audio and reaction signals, and renders vertical 1080x1920 clips with captions, layouts, music and upload.",
       "url": "https://motionmania.app/",
-      "downloadUrl": "https://motionmania.app/download.html",
+      "downloadUrl": "https://motionmania.app/download",
       "image": "https://motionmania.app/assets/img/og.jpg",
       "offers": [
         { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
@@ -166,21 +167,21 @@
     </div>
     <div class="clipwall">
       <article class="clipcard">
-        <img src="assets/img/clip-city.webp" width="720" height="1280" alt="Vertical clip preview of a neon Miami street at night">
+        <img loading="lazy" decoding="async" src="assets/img/clip-city.webp" width="720" height="1280" alt="Vertical clip preview of a neon Miami street at night">
         <span class="clipcard__score">9/10</span>
         <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
         <span class="clipcard__cap">He did not expect that</span>
         <span class="clipcard__meta">0:38 · 1080×1920</span>
       </article>
       <article class="clipcard">
-        <img src="assets/img/clip-palm.webp" width="720" height="1280" alt="Vertical clip preview of neon light trails around a palm tree">
+        <img loading="lazy" decoding="async" src="assets/img/clip-palm.webp" width="720" height="1280" alt="Vertical clip preview of neon light trails around a palm tree">
         <span class="clipcard__score">8/10</span>
         <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
         <span class="clipcard__cap">Wait for the end</span>
         <span class="clipcard__meta">0:27 · Pro Edit</span>
       </article>
       <article class="clipcard">
-        <img src="assets/img/clip-setup.webp" width="720" height="1280" alt="Vertical clip preview of a gaming room in blue light">
+        <img loading="lazy" decoding="async" src="assets/img/clip-setup.webp" width="720" height="1280" alt="Vertical clip preview of a gaming room in blue light">
         <span class="clipcard__score">7/10</span>
         <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
         <span class="clipcard__cap">Chat lost it</span>
@@ -311,7 +312,7 @@
       </div>
       <div class="split__media">
         <div class="preview916">
-          <img src="assets/img/clip-street.webp" width="720" height="1280" alt="A vertical clip preview with punch captions over a neon city street">
+          <img loading="lazy" decoding="async" src="assets/img/clip-street.webp" width="720" height="1280" alt="A vertical clip preview with punch captions over a neon city street">
           <span class="preview916__tag">Pro Edit</span>
           <span class="preview916__score" title="Example AI score for this preview — not a customer review" aria-label="Example AI score, not a customer review">AI 9/10</span>
           <div class="preview916__cap">No way<br><em>he did that</em></div>
@@ -321,29 +322,29 @@
     <div class="look-grid" aria-label="Template Studio previews">
       <div class="look-card">
         <div class="look-card__media look-card__split">
-          <img src="assets/img/clip-street.webp" alt="Split screen layout preview">
+          <img loading="lazy" decoding="async" src="assets/img/clip-street.webp" alt="Split screen layout preview">
           <span class="look-card__line"></span><span class="look-card__label">FACE</span><span class="look-card__label look-card__label--game">GAME</span>
         </div>
         <b>Split screen</b><span>Face + gameplay</span>
       </div>
       <div class="look-card">
-        <div class="look-card__media"><img src="assets/img/clip-city.webp" alt="Full frame layout preview"></div>
+        <div class="look-card__media"><img loading="lazy" decoding="async" src="assets/img/clip-city.webp" alt="Full frame layout preview"></div>
         <b>Full frame</b><span>Face-following crop</span>
       </div>
       <div class="look-card">
         <div class="look-card__media look-card__fit">
-          <img class="look-card__fit-bg" src="assets/img/clip-palm.webp" alt="">
-          <img class="look-card__fit-fg" src="assets/img/clip-palm.webp" alt="Blur fit layout preview">
+          <img loading="lazy" decoding="async" class="look-card__fit-bg" src="assets/img/clip-palm.webp" alt="">
+          <img loading="lazy" decoding="async" class="look-card__fit-fg" src="assets/img/clip-palm.webp" alt="Blur fit layout preview">
         </div>
         <b>Blur fit</b><span>Whole frame, no crop</span>
       </div>
       <div class="look-card">
-        <div class="look-card__media"><img src="assets/img/clip-setup.webp" alt="Teal and orange colour look preview" style="filter:sepia(.12) saturate(1.25) hue-rotate(-10deg) contrast(1.08)"></div>
+        <div class="look-card__media"><img loading="lazy" decoding="async" src="assets/img/clip-setup.webp" alt="Teal and orange colour look preview" style="filter:sepia(.12) saturate(1.25) hue-rotate(-10deg) contrast(1.08)"></div>
         <b>Teal &amp; orange</b><span>Vice City grade</span>
       </div>
       <div class="look-card">
         <div class="look-card__media look-card__captions">
-          <img src="assets/img/clip-street.webp" alt="">
+          <img loading="lazy" decoding="async" src="assets/img/clip-street.webp" alt="">
           <span>NO <em>WAY</em><br>HE DID THAT</span>
         </div>
         <b>Big captions</b><span>Anton · white + yellow</span>
@@ -384,7 +385,7 @@
               <div class="phone__notch" aria-hidden="true"></div>
               <div class="phone__bar"><b>Motion Mania</b><span>Clipping</span></div>
               <div class="phone__clip">
-                <img src="assets/img/clip-setup.webp" width="720" height="1280" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/clip-setup.webp" width="720" height="1280" alt="">
                 <span class="score">8/10</span>
                 <span class="cap">Wait for the end</span>
               </div>
@@ -406,7 +407,7 @@
 
 <!-- 8 · GTA 6 PHOTO BAND -->
 <section class="photo-band" aria-labelledby="gta-h">
-  <img src="assets/img/gta-miami.webp" width="1600" height="1066" alt="Neon-lit Miami street at night with palm trees and car light trails">
+  <img loading="lazy" decoding="async" src="assets/img/gta-miami.webp" width="1600" height="1066" alt="Neon-lit Miami street at night with palm trees and car light trails">
   <div class="wrap">
     <span class="eyebrow">GTA 6 · 19 November 2026</span>
     <h2 id="gta-h">Day-one GTA 6 clips can only come from the stream</h2>

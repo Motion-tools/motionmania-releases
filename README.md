@@ -67,6 +67,8 @@ Workers & Pages → Create → Pages → Connect to Git → framework preset **N
 - Semantic headings, one `<h1>` per page
 - Descriptive `alt` text, lazy loading below the fold
 - `robots.txt` + `sitemap.xml`
+- Canonical, `og:url`, sitemap and JSON-LD URLs are extensionless (`/privacy`, not `/privacy.html`) because Cloudflare redirects `.html` to the clean path
+- `llms.txt` summary for AI search tools
 - Fast: no webfonts, no frameworks, ~120 KB of images per page
 
 ### After deploy, do these
