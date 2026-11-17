@@ -410,7 +410,7 @@ li { margin: .4em 0; }
 .statement .w.on { color: var(--p-ink); }
 .statement .w.accent.on { color: var(--p-accent); }
 
-/* ---------------- callout / GTA ---------------- */
+/* ---------------- callout ---------------- */
 .callout {
   border: 1px solid rgb(255 255 255 / .1);
   border-radius: var(--r-lg);

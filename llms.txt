@@ -1,8 +1,8 @@
 # Motion Mania
 
-> Motion Mania is a desktop app for macOS and Windows that watches Twitch, YouTube or Kick live streams, catches the moment chat reacts to, and edits a vertical 1080×1920 clip with captions and sound. Detection, editing and rendering run on your own computer.
+> Motion Mania is a desktop app for macOS and Windows that edits broadcasts you own or have permission to use into vertical 1080×1920 clips with captions and sound. Detection, editing and rendering run on your own computer.
 
-- Free plan: unlimited clipping, post manually.
+- Free plan: unlimited editing, post manually.
 - Pro: $10/month. Adds Pro Edit, the phone app, auto-upload to YouTube Shorts and TikTok, and AI titles.
 - Support: support@motionmania.app
 
@@ -14,9 +14,8 @@
 
 ## Guides
 
-- [How to make GTA 6 clips on launch day](https://motionmania.app/guides/gta-6-clipping)
-- [How to clip Twitch streams automatically](https://motionmania.app/guides/twitch-clipping)
-- [How to clip Kick streams](https://motionmania.app/guides/kick-clipping)
+- [How to edit your own Twitch broadcasts](https://motionmania.app/guides/twitch-editing)
+- [How to edit your own Kick broadcasts](https://motionmania.app/guides/kick-editing)
 - [Turn streams into YouTube Shorts](https://motionmania.app/guides/youtube-shorts-from-streams)
 
 ## Legal
@@ -24,5 +23,6 @@
 - [Privacy policy](https://motionmania.app/privacy)
 - [Terms of service](https://motionmania.app/terms)
 - [Refund policy](https://motionmania.app/refund)
+- [Rights & content policy](https://motionmania.app/rights)
 - [Delete your data](https://motionmania.app/data-deletion)
 - [Contact](https://motionmania.app/contact)

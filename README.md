@@ -6,11 +6,11 @@ Static marketing site for [Motion Mania](https://motionmania.app). Plain HTML, o
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home: hero, how it works, detection, editing, GTA 6, pricing summary, FAQ |
+| `index.html` | Home: hero, how it works, detection, editing, pricing summary, FAQ |
 | `features.html` | Full feature list, Pro Edit detail, honest limits |
 | `pricing.html` | Free / Pro monthly / Pro yearly, comparison table, billing FAQ |
 | `download.html` | Installer links, requirements, first-run steps, troubleshooting |
-| `guides/` | Four SEO guides: GTA 6, Twitch, Kick, Stream → Shorts |
+| `guides/` | Three SEO guides: Twitch, Kick, Stream → Shorts |
 | `privacy.html` | Privacy policy (Google + TikTok limited-use, Claude data flow) |
 | `terms.html` | Terms of service |
 | `data-deletion.html` | Data deletion instructions (required for Google verification) |
@@ -33,7 +33,7 @@ Static marketing site for [Motion Mania](https://motionmania.app). Plain HTML, o
 
 4. **Legal review.** The privacy policy and terms are a solid, plain-English starting point, not legal advice. Have someone qualified review them before you charge money — especially the refund, liability and governing-law sections.
 
-5. **Claims.** The site deliberately only claims what the app does today. If you add multi-stream, VOD scanning or GTA presets, update `features.html` and remove the matching line from "What it doesn't do".
+5. **Claims.** The site deliberately only claims what the app does today. If you add multi-stream or VOD scanning, update `features.html` and remove the matching line from "What it doesn't do".
 
 ## Deploy (GitHub Pages)
 
@@ -76,7 +76,7 @@ Workers & Pages → Create → Pages → Connect to Git → framework preset **N
 1. **Google Search Console** → add `motionmania.app` → verify by DNS → submit `sitemap.xml`.
 2. **Bing Webmaster Tools** → same (also feeds ChatGPT search and Copilot).
 3. Add the site to your Google OAuth consent screen (home, privacy, terms URLs) and TikTok app settings — this site is what those reviews look at.
-4. Write one new guide per week. Ranking for "GTA 6 clipping" needs content velocity plus backlinks; a single page will not do it alone.
+4. Write one new guide per week. Ranking for creator editing guides needs content velocity plus backlinks; a single page will not do it alone.
 5. Get links: post the guides (not the homepage) in relevant Discords, Reddit threads and X replies. Guides earn links; homepages don't.
 
 ## Add analytics later (optional)

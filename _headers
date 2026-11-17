@@ -4,7 +4,7 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Frame-Options: SAMEORIGIN
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://*.paddle.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.paddle.com; connect-src 'self' https://*.paddle.com https://motionmania-api.pritamsap2.workers.dev https://api.motionmania.app; frame-src https://*.paddle.com; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://*.paddle.com
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://motionmania-api.pritamsap2.workers.dev https://api.motionmania.app; frame-src 'self'; object-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

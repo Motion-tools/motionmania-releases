@@ -1,7 +1,7 @@
 {
   "name": "Motion Mania",
   "short_name": "Motion Mania",
-  "description": "Live stream clipping for Twitch, YouTube and Kick.",
+  "description": "Short-form editing for creator-owned broadcasts.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0b0d",
