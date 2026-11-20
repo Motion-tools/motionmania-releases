@@ -70,15 +70,24 @@
   var deals = document.querySelectorAll('[data-deal-end]');
   if (deals.length) {
     var end = Date.parse(deals[0].getAttribute('data-deal-end'));
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
     var tick = function () {
       var left = end - Date.now();
-      if (!(left > 0)) { document.documentElement.classList.add('deal-over'); return false; }
-      var m = Math.floor(left / 60000);
-      var text = Math.floor(m / 1440) + 'd ' + Math.floor((m % 1440) / 60) + 'h ' + (m % 60) + 'm';
+      if (!(left > 0)) {
+        document.documentElement.classList.add('deal-over');
+        document.querySelectorAll('[data-deal-timer]').forEach(function (el) { el.textContent = 'ended'; });
+        return false;
+      }
+      var total = Math.floor(left / 1000);
+      var d = Math.floor(total / 86400);
+      var h = Math.floor((total % 86400) / 3600);
+      var m = Math.floor((total % 3600) / 60);
+      var sec = total % 60;
+      var text = (d > 0 ? d + 'd ' : '') + pad(h) + 'h ' + pad(m) + 'm ' + pad(sec) + 's';
       document.querySelectorAll('[data-deal-timer]').forEach(function (el) { el.textContent = text; });
       return true;
     };
-    if (tick()) var dealTimer = setInterval(function () { if (!tick()) clearInterval(dealTimer); }, 30000);
+    if (tick()) var dealTimer = setInterval(function () { if (!tick()) clearInterval(dealTimer); }, 1000);
   }
 })();
 
