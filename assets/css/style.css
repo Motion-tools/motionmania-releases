@@ -940,3 +940,55 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   100% { box-shadow: 0 0 0 0 rgb(74 222 128 / 0); }
 }
 @media (prefers-reduced-motion: reduce) { .pc-timer::before, .deal-timer::before { animation: none; } }
+
+/* ---------------- homepage upgrade (2026-11-20) ---------------- */
+/* Black Friday bar: one line on top, gone when the deal ends (.deal-over). */
+.promo.deal { margin: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 14px;
+  padding: 9px 16px; background: linear-gradient(90deg, rgb(255 45 85 / .16), rgb(74 222 128 / .10)); border-bottom: 1px solid rgb(255 255 255 / .07);
+  color: var(--p-ink); font-size: 13px; text-decoration: none; }
+.promo.deal:hover { background: linear-gradient(90deg, rgb(255 45 85 / .22), rgb(74 222 128 / .14)); }
+.promo__tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 3px 7px; border-radius: 4px; background: var(--p-accent); color: #fff; }
+.promo s { color: var(--p-muted); }
+.promo b { color: #4ade80; font-weight: 600; }
+.promo__timer { font-family: var(--font-mono); font-size: 12px; color: var(--p-muted); }
+.promo__timer b { color: var(--p-ink); }
+
+/* Stats line above the headline (mono, quiet). */
+.hero__stats { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 18px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--p-muted); }
+.hero__stats b { color: var(--p-accent); font-weight: 600; }
+
+/* A real screenshot in a window frame. */
+.appshot { border-radius: 14px; overflow: hidden; border: 1px solid rgb(255 255 255 / .1); background: #0e0e11;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / .8), 0 0 0 1px rgb(255 45 85 / .06); transform: perspective(1400px) rotateY(-6deg) rotateX(2deg); transition: transform .6s var(--ease); }
+.appshot:hover { transform: none; }
+.appshot__bar { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-bottom: 1px solid rgb(255 255 255 / .07); font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; color: var(--p-muted); }
+.appshot img { display: block; width: 100%; height: auto; }
+@media (max-width: 820px), (prefers-reduced-motion: reduce) { .appshot { transform: none; } }
+
+/* Clip from → Post to. */
+.flowstrip { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 16px; margin-top: 44px; padding: 14px 18px;
+  border: 1px solid rgb(255 255 255 / .07); border-radius: 999px; color: var(--p-ink); font-size: var(--t-small); }
+.flowstrip__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--p-muted); }
+.flowstrip__arrow { color: var(--p-accent); }
+@media (max-width: 560px) { .flowstrip { border-radius: 16px; } }
+
+/* Real app screens, three across. */
+.appgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.appcard { margin: 0; border: 1px solid rgb(255 255 255 / .08); border-radius: var(--r-md); overflow: hidden; background: var(--p-surface); transition: transform .25s var(--ease), border-color .25s var(--ease); }
+.appcard:hover { transform: translateY(-3px); border-color: rgb(255 45 85 / .35); }
+.appcard img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; }
+.appcard figcaption { display: grid; gap: 4px; padding: 14px 16px 16px; }
+.appcard figcaption b { color: var(--p-ink); font-weight: 600; }
+.appcard figcaption span { color: var(--p-muted); font-size: var(--t-small); }
+@media (max-width: 900px) { .appgrid { grid-template-columns: 1fr; } }
+/* The promo bar lives inside the fixed header: push the hero down while it shows. */
+html:not(.deal-over) .hero { padding-top: 106px; }
+@media (max-width: 1024px) { html:not(.deal-over) .hero { padding-top: 186px; } }
+/* The hero now holds a real screenshot: size to it, not to the old drawn mock-up. */
+.hero__art:has(.appshot) { aspect-ratio: auto; background: none; overflow: visible; border-radius: 0; align-self: center; }
+@media (max-width: 560px) {
+  .promo.deal { flex-wrap: nowrap; gap: 8px; padding: 7px 10px; font-size: 12px; white-space: nowrap; }
+  .promo s, .promo__long { display: none; }
+  .promo__tag { font-size: 9px; padding: 2px 6px; }
+  .promo__timer { font-size: 11px; }
+}

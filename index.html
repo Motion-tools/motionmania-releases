@@ -15,7 +15,7 @@
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preload" href="assets/fonts/Epilogue-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=20261120c">
+<link rel="stylesheet" href="assets/css/style.css?v=20261120d">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Motion Mania">
@@ -61,7 +61,7 @@
       "image": "https://motionmania.app/assets/img/og.jpg",
       "offers": [
         { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Pro monthly", "price": "10", "priceCurrency": "USD" }
+        { "@type": "Offer", "name": "Pro monthly", "price": "14.99", "priceCurrency": "USD" }
       ]
     },
     {
@@ -83,6 +83,11 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
+  <a class="promo deal" href="#pricing" data-deal-end="2026-12-05T07:59:00Z">
+    <span class="promo__tag">Black Friday</span>
+    <span>Pro <s>$24.99</s> <b>$14.99/mo</b><span class="promo__long">, locked in while you stay</span></span>
+    <span class="promo__timer">Ends in <b data-deal-timer>15d 0h 0m</b></span>
+  </a>
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="Motion Mania home">
       <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#101014"/><rect x="17" y="17" width="44" height="44" rx="12" fill="none" stroke="#fff" stroke-width="7" opacity=".45"/><rect x="40" y="40" width="44" height="44" rx="12" fill="#FF2D55"/><path d="M57 51 74 62 57 73Z" fill="#fff"/></svg>
@@ -107,84 +112,51 @@
   <div class="wrap">
     <div class="hero__grid">
       <div class="hero__text">
-        <span class="hero__badge enter"><b>New</b> Built for creator-owned footage</span>
-        <h1 id="hero-h" class="enter">Turn your own broadcasts into short-form clips</h1>
-        <p class="hero__lead enter">Motion Mania edits the moments you choose from broadcasts you own or have permission to use. It renders on your computer, with captions, layouts and sound.</p>
+        <p class="hero__stats enter"><span><b>Unlimited</b> clips</span><span><b>0</b> credits</span><span><b>Live</b> while you stream</span></p>
+        <h1 id="hero-h" class="enter">Your stream clips itself while you play</h1>
+        <p class="hero__lead enter">Motion Mania watches your Twitch, YouTube or Kick stream, catches the moments chat reacts to and edits vertical clips with captions. It runs on your computer, so there are no credits and no limits.</p>
         <div class="btn-row enter">
           <a class="btn btn--primary" href="https://downloads.motionmania.app/MotionMania-1.0.6-arm64.dmg" rel="noopener">Download for Mac</a>
           <a class="btn btn--secondary" href="https://downloads.motionmania.app/MotionMania-Setup-1.0.6.exe" rel="noopener">Download for Windows</a>
         </div>
-        <p class="hero__proof enter"><span>macOS and Windows</span></p>
+        <p class="hero__proof enter"><span>Free to start</span><span>No card needed</span><span>For broadcasts you own or may use</span></p>
       </div>
-
-      <div class="hero__art enter enter--art" role="img" aria-label="Motion Mania's clip inbox: three moments waiting for approval, each with a quality score">
-        <div class="win" aria-hidden="true">
-          <div class="win__bar"><span class="win__dots"><i></i><i></i><i></i></span><span>Motion Mania · clip studio</span></div>
-          <div class="win__side">
-            <span class="is-on"><i></i>Home</span>
-            <span><i></i>Templates</span>
-            <span><i></i>Accounts</span>
-          </div>
-          <div class="win__main">
-            <div class="win__head"><b>Clips</b><span class="win__live">Live</span></div>
-            <div class="win__tabs"><span class="is-on">Waiting 3</span><span>Approved 14</span></div>
-            <div class="cliprow">
-              <span class="cliprow__thumb"></span>
-              <span class="cliprow__meta"><b>He did not expect that</b><small>0:38 · chat spike</small></span>
-              <span class="cliprow__score">9/10</span>
-            </div>
-            <div class="cliprow">
-              <span class="cliprow__thumb"></span>
-              <span class="cliprow__meta"><b>Wait for the end</b><small>0:27 · loudness +11 dB</small></span>
-              <span class="cliprow__score">8/10</span>
-            </div>
-            <div class="cliprow">
-              <span class="cliprow__thumb"></span>
-              <span class="cliprow__meta"><b>Chat lost it</b><small>0:51 · reaction</small></span>
-              <span class="cliprow__score low">5/10</span>
-            </div>
-          </div>
-        </div>
-        <div class="win__note" aria-hidden="true">
-          <span class="tag">Clip ready</span>
-          <b>0:38 · 1080×1920</b>
-          <small>Captions, split layout, music on the punchline</small>
-          <div class="bar"><i></i></div>
+      <div class="hero__art enter enter--art">
+        <div class="appshot">
+          <div class="appshot__bar" aria-hidden="true"><span class="win__dots"><i></i><i></i><i></i></span><span>Motion Mania</span></div>
+          <img src="assets/img/app-home.webp" width="1440" height="900" alt="Motion Mania's Home screen: paste a live link and press Start clipping" fetchpriority="high">
         </div>
       </div>
+    </div>
+    <div class="flowstrip enter" aria-label="Clip from Twitch, YouTube and Kick, post to Shorts, TikTok and Reels">
+      <span class="flowstrip__label">Clip from</span><span>Twitch</span><span>YouTube</span><span>Kick</span>
+      <span class="flowstrip__arrow" aria-hidden="true">→</span>
+      <span class="flowstrip__label">Post to</span><span>Shorts</span><span>TikTok</span><span>Reels</span>
     </div>
   </div>
 </section>
 
-<!-- 2 · CLIP WALL -->
+<!-- 2 · REAL SCREENS -->
 <section class="screen" aria-labelledby="out-h">
   <div class="wrap">
     <div class="sechead">
-      <h2 id="out-h">One stream. A week of posts.</h2>
-      <p>Vertical, captioned, scored and ready. Every clip is a normal MP4 you can post anywhere.</p>
+      <span class="eyebrow">The app</span>
+      <h2 id="out-h">Set the look once. Every clip comes out ready.</h2>
+      <p>Real Motion Mania screens. Pick a layout and captions, let Pro Edit cut the clip, or turn a whole stream into one story.</p>
     </div>
-    <div class="clipwall">
-      <article class="clipcard">
-        <img loading="lazy" decoding="async" src="assets/img/clip-city.webp" width="720" height="1280" alt="Vertical clip preview of a neon Miami street at night">
-        <span class="clipcard__score">9/10</span>
-        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-        <span class="clipcard__cap">He did not expect that</span>
-        <span class="clipcard__meta">0:38 · 1080×1920</span>
-      </article>
-      <article class="clipcard">
-        <img loading="lazy" decoding="async" src="assets/img/clip-palm.webp" width="720" height="1280" alt="Vertical clip preview of neon light trails around a palm tree">
-        <span class="clipcard__score">8/10</span>
-        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-        <span class="clipcard__cap">Wait for the end</span>
-        <span class="clipcard__meta">0:27 · Pro Edit</span>
-      </article>
-      <article class="clipcard">
-        <img loading="lazy" decoding="async" src="assets/img/clip-setup.webp" width="720" height="1280" alt="Vertical clip preview of a gaming room in blue light">
-        <span class="clipcard__score">7/10</span>
-        <span class="clipcard__play" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>
-        <span class="clipcard__cap">Chat lost it</span>
-        <span class="clipcard__meta">0:51 · reaction</span>
-      </article>
+    <div class="appgrid">
+      <figure class="appcard">
+        <img loading="lazy" decoding="async" src="assets/img/app-studio.webp" width="1440" height="900" alt="Template Studio: choose split screen, full frame, blur fit and more, with a live phone preview">
+        <figcaption><b>Template Studio</b><span>Layouts, captions, colour and music. Free</span></figcaption>
+      </figure>
+      <figure class="appcard">
+        <img loading="lazy" decoding="async" src="assets/img/app-proedit.webp" width="1440" height="900" alt="Pro Edit: hook first, pattern interrupts and a loopable ending, with a phone preview">
+        <figcaption><b>Pro Edit</b><span>Hook first, jump cuts, sound design, looping end. Pro</span></figcaption>
+      </figure>
+      <figure class="appcard">
+        <img loading="lazy" decoding="async" src="assets/img/app-storyline.webp" width="1440" height="900" alt="Storyline: turn a stream into a 30 to 60 second story from several clips">
+        <figcaption><b>Storyline</b><span>Several moments, one 60-second story. Pro</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -256,7 +228,7 @@
         <div class="sense-grid">
           <div class="sense">
             <span class="sense__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.4L3 21l2.1-5.2A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8 9h8M8 13h5"/></svg></span>
-            <b>2.5× chat speed</b>
+            <b>3× chat speed</b>
             <span>Spikes over the channel’s own normal</span>
           </div>
           <div class="sense">
@@ -411,12 +383,10 @@
     <p class="lede" style="max-width:58ch">Straight from the comments on our launch video — nothing edited.</p>
     <div class="reviews">
       <figure class="review">
-        <div class="review__stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <blockquote class="review__text"><p>“I just downloaded the app and have been loving it.”</p></blockquote>
         <figcaption class="review__who">From a YouTube comment on our launch video</figcaption>
       </figure>
       <figure class="review">
-        <div class="review__stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <blockquote class="review__text"><p>“Thanks broo this app is so good man its pretty straightforward and easy to use, even if you're a beginner. I also like that you don't need advanced editing skills to get started. Definitely worth checking out.”</p></blockquote>
         <figcaption class="review__who">From a YouTube comment on our launch video</figcaption>
       </figure>
@@ -424,19 +394,27 @@
   </div>
 </section>
 
-<section class="section section--line" aria-labelledby="ring-h">
-  <div class="wrap center">
-    <span class="eyebrow">Examples</span>
-    <h2 id="ring-h">One stream, several clips</h2>
-    <p class="lede" style="max-width:56ch;margin:12px auto 0">Free-plan clips from a public stream: the layout, the captions and the look, with no watermark.</p>
-  </div>
-  <div class="ring" data-ring>
-    <div class="ring__stage" data-ring-stage>
-      <figure class="ring__card" style="--i:0"><img src="assets/img/clip-city.webp" alt="Clip preview: neon city street at night" loading="lazy"><figcaption>Hype · 0:23</figcaption></figure>
-      <figure class="ring__card" style="--i:1"><img src="assets/img/clip-palm.webp" alt="Clip preview: neon light trails around a palm tree" loading="lazy"><figcaption>Shock · 0:31</figcaption></figure>
-      <figure class="ring__card" style="--i:2"><img src="assets/img/clip-setup.webp" alt="Clip preview: gaming room in blue light" loading="lazy"><figcaption>Funny · 0:18</figcaption></figure>
-      <figure class="ring__card" style="--i:3"><img src="assets/img/clip-street.webp" alt="Clip preview: street scene at night" loading="lazy"><figcaption>Rage · 0:27</figcaption></figure>
+<section class="section section--line" aria-labelledby="vs-h">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="eyebrow">Why it's different</span>
+      <h2 id="vs-h">Cloud clippers count minutes. Motion Mania doesn't.</h2>
+      <p>Cloud tools edit on their servers, so every minute of video costs them, and they pass it on as credits. Motion Mania edits on your computer.</p>
     </div>
+    <div class="table-wrap" style="margin-top:24px">
+      <table class="compare">
+        <thead><tr><th scope="col"></th><th scope="col">Typical cloud clipper</th><th scope="col">Motion Mania</th></tr></thead>
+        <tbody>
+          <tr><td>Limits</td><td>Credits per minute of video</td><td><strong>Unlimited clips</strong>, both plans</td></tr>
+          <tr><td>When clips appear</td><td>After you upload the VOD</td><td><strong>While you're still live</strong></td></tr>
+          <tr><td>An 8-hour stream</td><td>Uses up hours of credits</td><td><strong>Costs the same as one minute</strong></td></tr>
+          <tr><td>How moments are found</td><td>Mostly the transcript</td><td><strong>Chat speed, loudness and faces</strong></td></tr>
+          <tr><td>Your footage</td><td>Uploaded to their servers</td><td><strong>Stays on your computer</strong></td></tr>
+          <tr><td>Approve from your phone</td><td>Varies</td><td><strong>Push notification, one tap</strong> (Pro)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted" style="margin-top:14px">The trade-off: Motion Mania needs a Mac or Windows computer that stays on while it clips.</p>
   </div>
 </section>
 
