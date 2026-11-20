@@ -903,3 +903,26 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .faq-card .faq { border-top: 0; }
 .faq-card .faq details:last-child { border-bottom: 0; }
+
+/* ---------------- 3D clip ring ---------------- */
+.ring { position: relative; height: clamp(380px, 52vw, 500px); margin-top: 40px; perspective: 1500px; overflow: hidden; }
+.ring::after { content: ""; position: absolute; inset: auto 0 0; height: 90px; background: linear-gradient(180deg, transparent, var(--p-bg)); pointer-events: none; }
+.ring__stage {
+  position: absolute; left: 50%; top: 50%; width: 210px; height: 360px; margin: -180px 0 0 -105px;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--spin, -18deg)) rotateX(4deg);
+}
+.ring__card {
+  position: absolute; inset: 0; margin: 0; border-radius: 16px; overflow: hidden;
+  border: 1px solid rgb(255 255 255 / .12);
+  box-shadow: 0 40px 80px -34px rgb(0 0 0 / .95);
+  transform: rotateY(calc(var(--i) * 90deg)) translateZ(var(--radius, 330px));
+  backface-visibility: hidden;
+}
+.ring__card img { width: 100%; height: 100%; object-fit: cover; }
+.ring__card figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px;
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+  color: #f4f2ef; background: linear-gradient(180deg, transparent, rgb(0 0 0 / .8));
+}
+@media (prefers-reduced-motion: reduce) { .ring__stage { transform: none; } }

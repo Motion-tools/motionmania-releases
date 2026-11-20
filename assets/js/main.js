@@ -81,3 +81,20 @@
     if (tick()) var dealTimer = setInterval(function () { if (!tick()) clearInterval(dealTimer); }, 30000);
   }
 })();
+
+// 3D clip ring: a gentle turn as the section crosses the viewport.
+(function () {
+  var ring = document.querySelector('[data-ring]');
+  if (!ring) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var stage = ring.querySelector('[data-ring-stage]');
+  var update = function () {
+    var r = ring.getBoundingClientRect();
+    var p = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+    p = Math.max(0, Math.min(1, p));
+    stage.style.setProperty('--spin', (-18 - p * 96) + 'deg');
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
