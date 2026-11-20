@@ -3,7 +3,7 @@
 > Motion Mania is a desktop app for macOS and Windows that edits broadcasts you own or have permission to use into vertical 1080×1920 clips with captions and sound. Detection, editing and rendering run on your own computer.
 
 - Free plan: unlimited editing, post manually.
-- Pro: $15/month. Adds Pro Edit, the phone app, auto-upload to YouTube Shorts and TikTok, and AI titles.
+- Pro: $14.99/month. Adds Pro Edit, the phone app, auto-upload to YouTube Shorts and TikTok, and AI titles.
 - Support: support@motionmania.app
 
 ## Product
