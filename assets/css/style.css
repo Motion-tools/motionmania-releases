@@ -845,3 +845,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .advantage__icon svg { max-width: 14px; max-height: 14px; }
   .look-card__effects svg { width: 18px; height: 18px; }
 }
+
+/* ---------------- Black Friday deal (pricing + home Pro card) ---------------- */
+.deal { margin: var(--s-3) 0 2px; }
+.deal-tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; background: rgb(74 222 128 / .12); color: #6ee7a0; border: 1px solid rgb(74 222 128 / .35); }
+.deal .price { margin-top: var(--s-3); }
+.deal .price s { color: var(--p-muted); text-decoration-thickness: 3px; font-size: .75em; margin-right: 4px; }
+.deal .price ins { text-decoration: none; color: #4ade80; }
+.deal-note { font-size: var(--t-small); color: var(--p-muted); margin: 8px 0 0; }
+.deal-note strong { color: var(--p-ink); font-weight: 600; }
+.deal-timer { font-family: var(--font-mono); font-size: 12px; color: var(--p-muted); margin: 8px 0 0; }
+.deal-timer b { color: var(--p-ink); font-weight: 600; }
+.deal-after { display: none; }
+.deal-over .deal { display: none; }
+.deal-over .deal-after { display: block; }

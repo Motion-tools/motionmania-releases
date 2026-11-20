@@ -65,4 +65,19 @@
       window.addEventListener('resize', update);
     }
   }
+
+  // ---- Black Friday deal: one fixed end date for everyone; after it, the normal price shows.
+  var deals = document.querySelectorAll('[data-deal-end]');
+  if (deals.length) {
+    var end = Date.parse(deals[0].getAttribute('data-deal-end'));
+    var tick = function () {
+      var left = end - Date.now();
+      if (!(left > 0)) { document.documentElement.classList.add('deal-over'); return false; }
+      var m = Math.floor(left / 60000);
+      var text = Math.floor(m / 1440) + 'd ' + Math.floor((m % 1440) / 60) + 'h ' + (m % 60) + 'm';
+      document.querySelectorAll('[data-deal-timer]').forEach(function (el) { el.textContent = text; });
+      return true;
+    };
+    if (tick()) var dealTimer = setInterval(function () { if (!tick()) clearInterval(dealTimer); }, 30000);
+  }
 })();
