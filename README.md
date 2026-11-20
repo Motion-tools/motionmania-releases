@@ -111,3 +111,17 @@ Remaining checker findings are structural (section/footer height multiples) or d
 - System font stack — no webfont requests
 - Screenshots live in `assets/img/*.webp` (generated from `MotionMania/docs/redesign`)
 - Logo mark is inline SVG, matching the app icon
+
+## Cache busting (important)
+
+`_headers` serves `/assets/*` with `Cache-Control: immutable, max-age=1y`, so a
+browser never re-fetches a changed CSS or JS file. **Whenever
+`assets/css/style.css` or `assets/js/main.js` changes, bump the version query in
+every HTML file** (currently `?v=20261120a`):
+
+```bash
+# replace 20261120a with a new value in all pages at once
+grep -rl "?v=20261120a" --include=*.html . | xargs sed -i '' 's/?v=20261120a/?v=20261120b/g'
+```
+
+Without this, the page changes but returning visitors keep the old stylesheet.
