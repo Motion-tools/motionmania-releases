@@ -11,11 +11,15 @@
 <meta name="theme-color" content="#0b0b0d">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-48.png" sizes="48x48">
+<link rel="icon" href="assets/img/favicon-96.png" sizes="96x96">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preload" href="assets/fonts/Epilogue-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=20261120d">
+<link rel="stylesheet" href="assets/css/style.css?v=20261121a">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Motion Mania">
@@ -69,7 +73,7 @@
       "@id": "https://motionmania.app/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "Which streaming platforms does Motion Mania work with?", "acceptedAnswer": { "@type": "Answer", "text": "Twitch, YouTube and Kick, for broadcasts you own or have permission to use. Local files work too." } },
-        { "@type": "Question", "name": "Does my computer need to stay on?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Motion Mania records and renders on your own computer, which is why clips are unlimited and your footage never leaves the machine." } },
+        { "@type": "Question", "name": "Does my computer need to stay on?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Motion Mania records and renders on your own computer, so there is no per-minute charge and your footage never leaves the machine." } },
         { "@type": "Question", "name": "Is Motion Mania a cloud service?", "acceptedAnswer": { "@type": "Answer", "text": "No. Detection, editing and rendering happen locally. The network is used for the stream and optional AI titles. Publishing to YouTube or TikTok is optional and coming soon." } },
         { "@type": "Question", "name": "Can I edit someone else's broadcast?", "acceptedAnswer": { "@type": "Answer", "text": "Only if you own it or have documented permission to use and republish it." } },
         { "@type": "Question", "name": "Can I post to YouTube or TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "Auto-upload to YouTube Shorts and TikTok is coming soon to Pro while their platform reviews finish. For now, export the 1080×1920 MP4 and post it yourself." } }
@@ -112,7 +116,7 @@
   <div class="wrap">
     <div class="hero__grid">
       <div class="hero__text">
-        <p class="hero__stats enter"><span><b>Unlimited</b> clips</span><span><b>0</b> credits</span><span><b>Live</b> while you stream</span></p>
+        <p class="hero__stats enter"><span><b>No</b> watermark</span><span><b>0</b> credits</span><span><b>Live</b> while you stream</span></p>
         <h1 id="hero-h" class="enter">Your stream clips itself while you play</h1>
         <p class="hero__lead enter">Motion Mania watches your Twitch, YouTube or Kick stream, catches the moments chat reacts to and edits vertical clips with captions. It runs on your computer, so there are no credits and no limits.</p>
         <div class="btn-row enter">
@@ -405,7 +409,6 @@
       <table class="compare">
         <thead><tr><th scope="col"></th><th scope="col">Typical cloud clipper</th><th scope="col">Motion Mania</th></tr></thead>
         <tbody>
-          <tr><td>Limits</td><td>Credits per minute of video</td><td><strong>Unlimited clips</strong>, both plans</td></tr>
           <tr><td>When clips appear</td><td>After you upload the VOD</td><td><strong>While you're still live</strong></td></tr>
           <tr><td>An 8-hour stream</td><td>Uses up hours of credits</td><td><strong>Costs the same as one minute</strong></td></tr>
           <tr><td>How moments are found</td><td>Mostly the transcript</td><td><strong>Chat speed, loudness and faces</strong></td></tr>
@@ -425,7 +428,7 @@
     </div>
     <div class="pricebanner">
       <b aria-hidden="true">✓</b>
-      <span><strong>Unlimited clips on both plans.</strong> No credits, minutes or caps.</span>
+      <span><strong>No credits, minutes or caps.</strong></span>
     </div>
     <div class="whygrid">
       <div class="why"><b>Export without a watermark</b><p>Approved clips export as a 1080×1920 MP4 with no watermark. Auto-upload to YouTube Shorts and TikTok is coming soon to Pro.</p></div>
@@ -438,7 +441,7 @@
         <p class="plan-note">Everything you need to make clips and post them yourself.</p>
         <div class="price">$0</div>
         <ul>
-          <li>Unlimited clips, one live stream</li>
+          <li>Clips up to 90 seconds, one live stream</li>
           <li>Template Studio and built-in layouts</li>
           <li>Manual Edit, 13 sound effects and clip merging</li>
           <li>Download 1080×1920 MP4, no watermark</li>
@@ -482,7 +485,7 @@
         <h2 id="faq-h">Questions, answered</h2>
         <div class="faq" style="margin-top:var(--s-4)">
           <div class="qa"><h3>Which platforms does it work with?</h3><p>Twitch, YouTube and Kick. Past broadcasts, normal videos and local files work too.</p></div>
-          <div class="qa"><h3>Does my computer need to stay on?</h3><p>Yes. Motion Mania records and renders on your own computer, which is why clips are unlimited and your footage never leaves the machine.</p></div>
+          <div class="qa"><h3>Does my computer need to stay on?</h3><p>Yes. Motion Mania records and renders on your own computer, so there is no per-minute charge and your footage never leaves the machine.</p></div>
           <div class="qa"><h3>Is it a cloud service?</h3><p>No. Detection, editing and rendering happen locally. The network is used for the stream and optional AI titles. Publishing to YouTube or TikTok is optional and coming soon.</p></div>
           <div class="qa"><h3>Can I edit someone else's broadcast?</h3><p>Only if you own it or have documented permission to use and republish it.</p></div>
           <div class="qa"><h3>Can I post to YouTube or TikTok?</h3><p>Auto-upload to YouTube Shorts and TikTok is coming soon to Pro while their platform reviews finish. For now, export the MP4 and post it yourself.</p></div>
@@ -557,6 +560,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261120c" defer></script>
+<script src="assets/js/main.js?v=20261121a" defer></script>
 </body>
 </html>

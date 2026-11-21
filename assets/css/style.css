@@ -930,7 +930,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 /* ---------------- live deal countdown ---------------- */
 .pc-timer, .deal-timer { display: inline-flex; align-items: center; gap: 7px; font-variant-numeric: tabular-nums; }
 .pc-timer::before, .deal-timer::before {
-  content: ""; width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+  content: ""; display: inline-block; vertical-align: middle; width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
   box-shadow: 0 0 0 0 rgb(74 222 128 / .6); animation: mm-pulse 2s ease-out infinite; flex: none; margin-right: 7px;
 }
 .pc-timer b, .deal-timer b { font-variant-numeric: tabular-nums; letter-spacing: .02em; }

@@ -10,8 +10,12 @@
 <link rel="canonical" href="https://motionmania.app/download">
 <meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-48.png" sizes="48x48">
+<link rel="icon" href="assets/img/favicon-96.png" sizes="96x96">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/style.css?v=20261120d">
+<link rel="stylesheet" href="assets/css/style.css?v=20261121a">
 <meta property="og:site_name" content="Motion Mania">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Download Motion Mania">
@@ -82,7 +86,18 @@
         <p class="tiny muted" style="margin-top:12px">The Windows beta is unsigned, so SmartScreen may warn. macOS and Windows are both in beta; report anything odd and we'll fix it fast.</p>
       </div>
     </div>
-    <p class="note" style="margin-top:20px">If a download saves as a <strong>0-byte file</strong>, a proxy, antivirus or a dropped connection interrupted it — delete it and try the mirror: <a href="https://github.com/Motion-tools/motionmania/releases/tag/v1.0.9" rel="noopener">GitHub release</a>. Windows build is 457,432,810 bytes (~436&nbsp;MB), macOS 493,294,122 bytes (~470&nbsp;MB). Still stuck? Email <a href="contact.html">support@motionmania.app</a> and we'll send it directly. No sign-up wall.</p>
+    <div class="card" style="margin-top:22px;padding:22px 24px">
+  <h3 style="margin-bottom:6px">Installing on Windows</h3>
+  <p class="small muted" style="margin-bottom:10px">The Windows build is not code-signed yet, so Windows shows a warning. That is expected — the app is safe, and you can verify the file size (457,432,810 bytes) before running it.</p>
+  <ol class="small" style="margin:0 0 0 1.1rem;padding:0;color:var(--p-muted)">
+    <li style="margin-bottom:8px"><strong style="color:var(--p-ink)">Run as administrator.</strong> Right-click the downloaded <em>MotionMania-Setup-1.0.9.exe</em> → <em>Run as administrator</em>.</li>
+    <li style="margin-bottom:8px"><strong style="color:var(--p-ink)">If Windows says “Windows protected your PC”</strong>, click <em>More info</em>, then <em>Run anyway</em>. If it only says “unknown publisher”, that is the same thing.</li>
+    <li style="margin-bottom:8px"><strong style="color:var(--p-ink)">Keep the default install folder</strong> so the update replaces your current version in place — clips, templates and login are kept.</li>
+    <li><strong style="color:var(--p-ink)">Blocked by antivirus?</strong> Check Windows Security → Protection history, allow the file, then run it again. Some scanners hold a 457 MB unsigned installer for a few seconds before releasing it.</li>
+  </ol>
+  <p class="tiny muted" style="margin-top:12px">macOS builds are signed and notarized by Apple, so they open normally. If macOS still blocks it: right-click the app → <em>Open</em> → <em>Open</em>.</p>
+</div>
+<p class="note" style="margin-top:20px">If a download saves as a <strong>0-byte file</strong>, a proxy, antivirus or a dropped connection interrupted it — delete it and try the mirror: <a href="https://github.com/Motion-tools/motionmania/releases/tag/v1.0.9" rel="noopener">GitHub release</a>. Windows build is 457,432,810 bytes (~436&nbsp;MB), macOS 493,294,122 bytes (~470&nbsp;MB). Still stuck? Email <a href="contact.html">support@motionmania.app</a> and we'll send it directly. No sign-up wall.</p>
   </div>
 </section>
 
@@ -176,7 +191,7 @@
         </a>
         <p class="small muted" style="margin-top:12px;max-width:34ch">Short-form editing for creator-owned broadcasts.</p>
       </div>
-      <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="guides/">Guides</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="download.html">Download</a></li><li><a href="guides/">Guides</a></li><li><a href="free-clipping-tool.html">Free clipping tool</a></li><li><a href="gta6-clipping-tool.html">GTA 6 clipping tool</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li><li><a href="refund.html">Refund policy</a></li><li><a href="rights.html">Rights &amp; content</a></li><li><a href="data-deletion.html">Data deletion</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h4>Platform</h4><ul><li><a href="guides/twitch-editing.html">Edit Twitch broadcasts</a></li><li><a href="guides/kick-editing.html">Edit Kick broadcasts</a></li><li><a href="guides/youtube-shorts-from-streams.html">Stream to Shorts</a></li></ul></div>
     </div>
@@ -184,6 +199,6 @@
     <p class="disclaimer">Motion Mania is not affiliated with, endorsed by or sponsored by Twitch, YouTube, Google, TikTok and Kick.</p>
   </div>
 </footer>
-<script src="assets/js/main.js?v=20261120c" defer></script>
+<script src="assets/js/main.js?v=20261121a" defer></script>
 </body>
 </html>
