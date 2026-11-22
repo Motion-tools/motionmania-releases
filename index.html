@@ -19,7 +19,7 @@
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preload" href="assets/fonts/Epilogue-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=20261121a">
+<link rel="stylesheet" href="assets/css/style.css?v=20261122a">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Motion Mania">
@@ -74,7 +74,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "Which streaming platforms does Motion Mania work with?", "acceptedAnswer": { "@type": "Answer", "text": "Twitch, YouTube and Kick, for broadcasts you own or have permission to use. Local files work too." } },
         { "@type": "Question", "name": "Does my computer need to stay on?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Motion Mania records and renders on your own computer, so there is no per-minute charge and your footage never leaves the machine." } },
-        { "@type": "Question", "name": "Is Motion Mania a cloud service?", "acceptedAnswer": { "@type": "Answer", "text": "No. Detection, editing and rendering happen locally. The network is used for the stream and optional AI titles. Publishing to YouTube or TikTok is optional and coming soon." } },
+        { "@type": "Question", "name": "Is Motion Mania a cloud service?", "acceptedAnswer": { "@type": "Answer", "text": "No. Detection, editing and rendering happen locally. The network is used for the stream and optional Smart Titles. Publishing to YouTube or TikTok is optional and coming soon." } },
         { "@type": "Question", "name": "Can I edit someone else's broadcast?", "acceptedAnswer": { "@type": "Answer", "text": "Only if you own it or have documented permission to use and republish it." } },
         { "@type": "Question", "name": "Can I post to YouTube or TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "Auto-upload to YouTube Shorts and TikTok is coming soon to Pro while their platform reviews finish. For now, export the 1080×1920 MP4 and post it yourself." } }
       ]
@@ -120,8 +120,8 @@
         <h1 id="hero-h" class="enter">Your stream clips itself while you play</h1>
         <p class="hero__lead enter">Motion Mania watches your Twitch, YouTube or Kick stream, catches the moments chat reacts to and edits vertical clips with captions. It runs on your computer, so there are no credits and no limits.</p>
         <div class="btn-row enter">
-          <a class="btn btn--primary" href="https://downloads.motionmania.app/MotionMania-1.0.9-arm64.dmg" rel="noopener">Download for Mac</a>
-          <a class="btn btn--secondary" href="https://downloads.motionmania.app/MotionMania-Setup-1.0.9.exe" rel="noopener">Download for Windows</a>
+          <a class="btn btn--primary" href="https://downloads.motionmania.app/MotionMania-1.1.0-arm64.dmg" rel="noopener">Download for Mac</a>
+          <a class="btn btn--secondary" href="https://downloads.motionmania.app/MotionMania-Setup-1.1.0.exe" rel="noopener">Download for Windows</a>
         </div>
         <p class="hero__proof enter"><span>Free to start</span><span>No card needed</span><span>For broadcasts you own or may use</span></p>
       </div>
@@ -428,12 +428,12 @@
     </div>
     <div class="pricebanner">
       <b aria-hidden="true">✓</b>
-      <span><strong>No credits, minutes or caps.</strong></span>
+      <span><strong>No credits and no per-minute charges.</strong></span>
     </div>
     <div class="whygrid">
       <div class="why"><b>Export without a watermark</b><p>Approved clips export as a 1080×1920 MP4 with no watermark. Auto-upload to YouTube Shorts and TikTok is coming soon to Pro.</p></div>
       <div class="why"><b>Approve anywhere</b><p>The private phone app sends a notification and takes one tap to approve, retitle or reject.</p></div>
-      <div class="why"><b>Let the AI choose</b><p>Titles, hooks and hashtags written from the clip, plus a quality score that skips the weak moments.</p></div>
+      <div class="why"><b>Let the AI choose</b><p>Smart Titles, hooks and hashtags written from the clip, plus an AI rating that skips the weak moments.</p></div>
     </div>
     <div class="plans plans--two">
       <div class="plan">
@@ -441,7 +441,7 @@
         <p class="plan-note">Everything you need to make clips and post them yourself.</p>
         <div class="price">$0</div>
         <ul>
-          <li>Clips up to 90 seconds, one live stream</li>
+          <li><strong>10 clips every day</strong> · clips up to 2 minutes · one live stream</li>
           <li>Template Studio and built-in layouts</li>
           <li>Manual Edit, 13 sound effects and clip merging</li>
           <li>Download 1080×1920 MP4, no watermark</li>
@@ -462,12 +462,13 @@
         </div>
         <div class="price deal-after">$24.99 <span>/ month</span><small>cancel any time</small></div>
         <ul>
-          <li>Everything in Free, plus 3 streams at once</li>
+          <li><strong>Unlimited clips</strong> · 3 live streams at once</li>
           <li><strong>Pro Edit</strong>: speaker cuts, jump cuts, motion, memes, sound design</li>
           <li><strong>Storyline</strong>: a real arc from your stream, cut into one story</li>
           <li><strong>Phone app</strong> with notifications</li>
+          <li><strong>Campaigns, Fix Blur and Pro looks</strong></li>
           <li><strong>Auto-upload (coming soon)</strong> to YouTube Shorts and TikTok</li>
-          <li><strong>AI titles</strong> and quality check</li>
+          <li><strong>Smart Titles</strong> and AI rating</li>
           <li>Email support</li>
         </ul>
         <a class="btn btn--primary btn--block" href="download.html">Get the app</a>
@@ -486,7 +487,7 @@
         <div class="faq" style="margin-top:var(--s-4)">
           <div class="qa"><h3>Which platforms does it work with?</h3><p>Twitch, YouTube and Kick. Past broadcasts, normal videos and local files work too.</p></div>
           <div class="qa"><h3>Does my computer need to stay on?</h3><p>Yes. Motion Mania records and renders on your own computer, so there is no per-minute charge and your footage never leaves the machine.</p></div>
-          <div class="qa"><h3>Is it a cloud service?</h3><p>No. Detection, editing and rendering happen locally. The network is used for the stream and optional AI titles. Publishing to YouTube or TikTok is optional and coming soon.</p></div>
+          <div class="qa"><h3>Is it a cloud service?</h3><p>No. Detection, editing and rendering happen locally. The network is used for the stream and optional Smart Titles. Publishing to YouTube or TikTok is optional and coming soon.</p></div>
           <div class="qa"><h3>Can I edit someone else's broadcast?</h3><p>Only if you own it or have documented permission to use and republish it.</p></div>
           <div class="qa"><h3>Can I post to YouTube or TikTok?</h3><p>Auto-upload to YouTube Shorts and TikTok is coming soon to Pro while their platform reviews finish. For now, export the MP4 and post it yourself.</p></div>
         </div>
@@ -560,6 +561,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261121a" defer></script>
+<script src="assets/js/main.js?v=20261122a" defer></script>
 </body>
 </html>
